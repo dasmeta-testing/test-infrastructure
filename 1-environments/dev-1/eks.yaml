@@ -10,8 +10,6 @@ variables:
   # map_roles:
   metrics_exporter: "adot"
   cluster_enabled_log_types: ["audit"]
-  adot_config:
-    default_config: true
   vpc:
     link:
       id: ${1-environments/dev-1/vpc.id}

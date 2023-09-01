@@ -5,7 +5,6 @@ module "this" {
   version = "2.8.0"
 
   account_id = "565580475168"
-  adot_config = {"default_config":true}
   cluster_enabled_log_types = ["audit"]
   cluster_name = "eks-dev"
   cluster_version = "1.27"

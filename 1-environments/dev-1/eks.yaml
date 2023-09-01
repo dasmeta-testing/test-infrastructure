@@ -11,7 +11,7 @@ variables:
   metrics_exporter: "adot"
   adot_config:
     accepte_namespace_regex: "(default|kube-system)"
-    additional_metrics: {}
+    additional_metrics: []
   cluster_enabled_log_types: ["audit"]
   vpc:
     link:

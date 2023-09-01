@@ -4,7 +4,7 @@ module "this" {
   source  = "dasmeta/modules/aws//modules/ecr"
   version = "2.6.2"
 
-  repos = ["blue"]
+  repos = ["strapi"]
 
 }
 

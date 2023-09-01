@@ -5,7 +5,7 @@ module "this" {
   version = "2.8.0-1"
 
   account_id = "565580475168"
-  adot_config = {"accepte_namespace_regex":"(default|kube-system)","additional_metrics":[]}
+  adot_config = {"accepte_namespace_regex" = "(default|kube-system)","additional_metrics" = []}
   cluster_enabled_log_types = ["audit"]
   cluster_name = "eks-dev"
   cluster_version = "1.27"

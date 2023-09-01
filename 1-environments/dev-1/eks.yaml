@@ -14,8 +14,8 @@ variables:
     default_config: true
   vpc:
     link:
-      id: ${1-environments/dev-1/vpc.output.id}
-      private_subnet_ids: ${1-environments/dev-1/vpc.output.private_subnets}
+      id: ${1-environments/dev-1/vpc.id}
+      private_subnet_ids: ${1-environments/dev-1/vpc.private_subnets}
   node_groups:
     dev_nodes: 
       max_capacity: 1

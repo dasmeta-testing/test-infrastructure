@@ -5,6 +5,7 @@ module "this" {
   version = "1.0.0"
 
   apply_immediately = true
+  backup_retention_period = 30
   db_name = "dbdev"
   db_password = "passwordTerraform12!"
   db_username = "userTerraform"

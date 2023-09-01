@@ -5,6 +5,7 @@ module "this" {
   version = "1.0.0"
 
   apply_immediately = true
+  db_name = "dbdev"
   db_password = "passwordTerraform12!"
   db_username = "userTerraform"
   enabled_cloudwatch_logs_exports = ["postgresql"]

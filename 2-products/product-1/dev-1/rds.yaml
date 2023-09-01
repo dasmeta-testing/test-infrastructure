@@ -1,6 +1,7 @@
 source: dasmeta/rds/aws
 version: 1.0.0
 variables:
+  db_name: "dbdev"
   engine: "postgres"
   engine_version: "14"
   identifier: "dbdev"

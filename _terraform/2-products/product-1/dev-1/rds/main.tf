@@ -13,8 +13,8 @@ module "this" {
   engine_version = "14"
   identifier = "dbdev"
   parameter_group_name = "rds-pg-12"
-  subnet_ids = "${data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.output.private_subnets}"
-  vpc_id = "${data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.output.id}"
+  subnet_ids = "${data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.private_subnets}"
+  vpc_id = "${data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.id}"
   providers = {"aws":"aws"}
 }
 

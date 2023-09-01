@@ -8,8 +8,8 @@ variables:
   db_username: "userTerraform"
   db_password: "passwordTerraform12!"
   parameter_group_name: "rds-pg-12"
-  vpc_id: ${1-environments/dev-1/vpc.output.id}
-  subnet_ids: ${1-environments/dev-1/vpc.output.private_subnets}
+  vpc_id: ${1-environments/dev-1/vpc.id}
+  subnet_ids: ${1-environments/dev-1/vpc.private_subnets}
   apply_immediately: true
   enabled_cloudwatch_logs_exports: ["postgresql"]
 providers:

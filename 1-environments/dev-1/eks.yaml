@@ -1,5 +1,5 @@
 source: dasmeta/eks/aws
-version: 2.8.0
+version: 2.8.0-1
 variables:
   # Account id
   account_id: "565580475168"

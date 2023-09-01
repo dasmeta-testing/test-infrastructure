@@ -2,7 +2,7 @@
 
 module "this" {
   source  = "dasmeta/eks/aws"
-  version = "2.8.0"
+  version = "2.8.0-1"
 
   account_id = "565580475168"
   adot_config = {"accepte_namespace_regex":"(default|kube-system)","additional_metrics":[]}

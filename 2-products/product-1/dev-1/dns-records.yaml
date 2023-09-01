@@ -1,0 +1,19 @@
+source: dasmeta/dns/aws
+version: 1.0.2
+variables:
+  create_zone: false
+  zone: "dasmeta.com"
+  records: 
+    - name: "dev"
+      type:  "A"
+      value: ["127.0.0.1"]
+providers:
+  - name: aws
+    version: ~> 4.0
+    module_nested_provider: true
+    variables:
+      region: eu-central-1
+      default_tags:
+        tags:
+          Account: boilerplate
+          ManageLevel: product

@@ -1,0 +1,24 @@
+source: dasmeta/modules/aws//modules/ingress
+version: 1.1.4
+variables:
+  name: "dev"
+  hostname: "dev.dasmeta.com"
+  namespace: "dev"
+  scheme: "internal"
+  certificate_arn :  ${ 2-products/product-1/certificate.output.arn}
+  healthcheck_path: "/health"
+  healthcheck_success_codes: "200-399"
+  tls_hosts:
+    - "dev.dasmeta.com"
+providers:
+  - name: aws
+    version: ~> 4.0
+    module_nested_provider: true
+    variables:
+      region: eu-central-1
+      default_tags:
+        tags:
+          Account: boilerplate
+          ManageLevel: product
+linked_workspaces:
+    - 2-products/product-1/certificate

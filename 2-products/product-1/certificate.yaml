@@ -1,7 +1,8 @@
-source: dasmeta/dns/aws
+source: dasmeta/modules/aws//modules/ssl-certificate
 version: 1.0.2
 variables:
-  create_zone: true
+  domain: "dasmeta.com"
+  alternative_domains: ["*.dasmeta.com"]
   zone: "dasmeta.com"
 providers:
   - name: aws

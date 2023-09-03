@@ -4,9 +4,9 @@ module "this" {
   source  = "dasmeta/modules/aws//modules/ssl-certificate"
   version = "1.0.2"
 
-  alternative_domains = ["*.dasmeta.com"]
-  domain = "dasmeta.com"
-  zone = "dasmeta.com"
+  alternative_domains = ["*.test,dasmeta.com"]
+  domain = "test.dasmeta.com"
+  zone = "test.dasmeta.com"
   providers = {"aws":"aws"}
 }
 

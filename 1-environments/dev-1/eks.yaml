@@ -6,7 +6,8 @@ variables:
   cluster_name: "eks-dev"
   cluster_version: "1.27"
   send_alb_logs_to_cloudwatch: false
-  # users:
+  users:
+   - arn:aws:iam::565580475168:role/AWSReservedSSO_AdministratorAccess_065650b3575bbc71
   # map_roles:
   metrics_exporter: "adot"
   adot_config:
@@ -18,7 +19,7 @@ variables:
       id: ${1-environments/dev-1/vpc.id}
       private_subnet_ids: ${1-environments/dev-1/vpc.private_subnets}
   node_groups:
-    dev_nodes: 
+    dev_nodes:
       max_capacity: 1
       min_size: 1
       max_size: 1
@@ -37,4 +38,4 @@ providers:
           Account: boilerplate
           ManageLevel: environment
 linked_workspaces:
-    - 1-environments/dev-1/vpc
+  - 1-environments/dev-1/vpc

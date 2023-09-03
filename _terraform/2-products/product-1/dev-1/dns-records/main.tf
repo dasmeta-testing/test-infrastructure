@@ -5,8 +5,8 @@ module "this" {
   version = "1.0.2"
 
   create_zone = false
-  records = [{"name":"dev","type":"A","value":["127.0.0.1"]}]
-  zone = "dasmeta.com"
+  records = [{"name":"local","type":"A","value":["127.0.0.1"]}]
+  zone = "test.dasmeta.com"
   providers = {"aws":"aws"}
 }
 

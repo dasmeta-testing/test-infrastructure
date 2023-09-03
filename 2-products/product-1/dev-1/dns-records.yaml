@@ -2,9 +2,9 @@ source: dasmeta/dns/aws
 version: 1.0.2
 variables:
   create_zone: false
-  zone: "dasmeta.com"
-  records: 
-    - name: "dev"
+  zone: "test.dasmeta.com"
+  records:
+    - name: "local"
       type:  "A"
       value: ["127.0.0.1"]
 providers:

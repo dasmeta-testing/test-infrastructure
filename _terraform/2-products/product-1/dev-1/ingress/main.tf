@@ -4,7 +4,7 @@ module "this" {
   source  = "dasmeta/modules/aws//modules/ingress"
   version = "1.1.4"
 
-  certificate_arn           = data.tfe_outputs.this["2-products/product-1/certificate"].values.results.output.arn
+  certificate_arn           = data.tfe_outputs.this["2-products/product-1/certificate"].values.results.arn
   healthcheck_path          = "/health"
   healthcheck_success_codes = "200-399"
   hostname                  = "test.dasmeta.com"

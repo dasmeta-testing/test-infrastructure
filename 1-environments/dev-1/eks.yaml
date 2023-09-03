@@ -7,7 +7,7 @@ variables:
   cluster_version: "1.27"
   send_alb_logs_to_cloudwatch: false
   users:
-   - username: arn:aws:iam::565580475168:role/AWSReservedSSO_AdministratorAccess_065650b3575bbc71
+   - username: aram.karapetyan
   # map_roles:
   metrics_exporter: "adot"
   adot_config:

@@ -13,7 +13,7 @@ module "this" {
   node_groups                 = { "dev_nodes" : { "desired_size" : 1, "max_capacity" : 1, "max_size" : 1, "min_size" : 1 } }
   node_groups_default         = { "capacity_type" : "SPOT", "instance_types" : ["t3.medium"] }
   send_alb_logs_to_cloudwatch = false
-  users                       = [{ "username" : "arn:aws:iam::565580475168:role/AWSReservedSSO_AdministratorAccess_065650b3575bbc71" }]
+  users                       = [{ "username" : "aram.karapetyan" }]
   vpc                         = { "link" : { "id" : "${data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.id}", "private_subnet_ids" : "${data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.private_subnets}" } }
   providers                   = { "aws" : "aws" }
 }

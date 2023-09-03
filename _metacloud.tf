@@ -9,7 +9,8 @@ variable "tfc_token" {}
 variable "git_token" {}
 
 module "metacloud" {
-  source = "github.com/dasmeta/terraform-tfe-cloud.git?ref=DMVP-2598-simplify-tfe-use"
+  source  = "dasmeta/cloud/tfe"
+  version = "v2.0.1"
 
   org   = "dasmeta-testing"
   token = var.tfc_token

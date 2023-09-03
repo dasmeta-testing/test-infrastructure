@@ -2,7 +2,7 @@ source: dasmeta/dns/aws
 version: 1.0.2
 variables:
   create_zone: true
-  zone: "dasmeta.com"
+  zone: "test.dasmeta.com"
 providers:
   - name: aws
     version: ~> 4.0

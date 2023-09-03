@@ -5,7 +5,7 @@ module "this" {
   version = "1.0.2"
 
   create_zone = true
-  zone = "boilerplate.dasmeta.com"
+  zone = "test.dasmeta.com"
   providers = {"aws":"aws"}
 }
 

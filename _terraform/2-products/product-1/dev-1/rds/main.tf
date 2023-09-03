@@ -4,19 +4,19 @@ module "this" {
   source  = "dasmeta/rds/aws"
   version = "1.0.0"
 
-  apply_immediately = true
-  backup_retention_period = 30
-  db_name = "dbdev"
-  db_password = "passwordTerraform12!"
-  db_username = "userTerraform"
+  apply_immediately               = true
+  backup_retention_period         = 30
+  db_name                         = "dbdev"
+  db_password                     = "passwordTerraform12!"
+  db_username                     = "userTerraform"
   enabled_cloudwatch_logs_exports = ["postgresql"]
-  engine = "postgres"
-  engine_version = "14"
-  identifier = "dbdev"
-  parameter_group_name = "rds-pg-12"
-  subnet_ids = "${data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.private_subnets}"
-  vpc_id = "${data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.id}"
-  providers = {"aws":"aws"}
+  engine                          = "postgres"
+  engine_version                  = "14"
+  identifier                      = "dbdev"
+  parameter_group_name            = "rds-pg-12"
+  subnet_ids                      = data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.private_subnets
+  vpc_id                          = data.tfe_outputs.this["1-environments/dev-1/vpc"].values.results.id
+  providers                       = { "aws" : "aws" }
 }
 
 

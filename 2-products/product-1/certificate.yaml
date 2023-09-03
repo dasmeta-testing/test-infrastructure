@@ -1,5 +1,5 @@
 source: dasmeta/modules/aws//modules/ssl-certificate
-version: 1.0.2
+version: 2.6.2
 variables:
   domain: "test.dasmeta.com"
   alternative_domains: ["*.test.dasmeta.com"]

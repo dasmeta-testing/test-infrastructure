@@ -8,6 +8,6 @@ provider "aws" {
 
   default_tags {
 
-    tags = {"Account":"boilerplate","AppliedFrom":"terraform-cloud","ManageLevel":"product","ManagedBy":"terraform","TerraformCloudWorkspace":"2-products_product-1_certificate","TerraformModuleSource":"dasmeta/modules/aws//modules/ssl-certificate","TerraformModuleVersion":"1.0.2"}
+    tags = {"Account":"boilerplate","AppliedFrom":"terraform-cloud","ManageLevel":"product","ManagedBy":"terraform","TerraformCloudWorkspace":"2-products_product-1_certificate","TerraformModuleSource":"dasmeta/modules/aws//modules/ssl-certificate","TerraformModuleVersion":"2.6.2"}
   }
 }

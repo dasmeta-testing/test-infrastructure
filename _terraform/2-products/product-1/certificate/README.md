@@ -6,5 +6,5 @@
 ```txt
 tf cloud workspace name: 2-products_product-1_certificate
 tf module source: dasmeta/modules/aws//modules/ssl-certificate
-tf_module version: 1.0.2
+tf_module version: 2.6.2
 ```

@@ -2,7 +2,7 @@
 
 module "this" {
   source  = "dasmeta/modules/aws//modules/ssl-certificate"
-  version = "1.0.2"
+  version = "2.6.2"
 
   alternative_domains = ["*.test.dasmeta.com"]
   domain = "test.dasmeta.com"

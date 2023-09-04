@@ -12,12 +12,12 @@ module "this" {
   namespace                 = "dev"
   scheme                    = "internal"
   tls_hosts                 = ["test.dasmeta.com"]
-  providers                 = { "aws" : "aws" }
+  providers                 = { "aws" : "aws", "kubernetes" : "kubernetes" }
 }
 
 
 data "tfe_outputs" "this" {
-  for_each = { for workspace in ["2-products/product-1/certificate"] : workspace => workspace }
+  for_each = { for workspace in ["1-environments/dev-1/eks", "2-products/product-1/certificate"] : workspace => workspace }
 
   organization = "dasmeta-testing"
   workspace    = replace(each.value, "/[^a-zA-Z0-9_-]+/", "_")

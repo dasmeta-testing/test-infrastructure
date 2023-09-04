@@ -6,5 +6,5 @@
 ```txt
 tf cloud workspace name: 1-environments_dev-1_eks
 tf module source: dasmeta/eks/aws
-tf_module version: 2.8.1
+tf_module version: 2.8.2
 ```

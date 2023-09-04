@@ -1,8 +1,8 @@
 ## This file and its content are generated based on config, pleas check README.md for more details
 
 module "this" {
-  source = "git::https://github.com/dasmeta/terraform-aws-eks.git?ref=DMVP-2685-fix-adot-dependency"
-  # version = "2.8.1"
+  source  = "dasmeta/eks/aws"
+  version = "2.8.2"
 
   account_id                  = "565580475168"
   adot_config                 = { "accept_namespace_regex" : "(default|kube-system)", "additional_metrics" : [] }

@@ -1,7 +1,7 @@
 ## This file and its content are generated based on config, pleas check README.md for more details
 
 module "this" {
-  source  = "dasmeta/eks/aws"
+  source  = "git::git@github.com:dasmeta/terraform-aws-eks.git?ref=DMVP-2685-fix-adot-dependency"
   version = "2.8.1"
 
   account_id                  = "565580475168"
@@ -9,7 +9,7 @@ module "this" {
   cluster_enabled_log_types   = ["audit"]
   cluster_name                = "eks-dev"
   cluster_version             = "1.27"
-  metrics_exporter            = "none"
+  metrics_exporter            = "adot"
   node_groups                 = { "dev_nodes" : { "desired_size" : 1, "max_capacity" : 1, "max_size" : 1, "min_size" : 1 } }
   node_groups_default         = { "capacity_type" : "SPOT", "instance_types" : ["t3.medium"] }
   send_alb_logs_to_cloudwatch = false

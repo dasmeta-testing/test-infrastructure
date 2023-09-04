@@ -1,7 +1,7 @@
 ## This file and its content are generated based on config, pleas check README.md for more details
 
 module "this" {
-  source  = "git::https://github.com:dasmeta/terraform-aws-eks.git?ref=DMVP-2685-fix-adot-dependency"
+  source  = "git::https://github.com/dasmeta/terraform-aws-eks.git?ref=DMVP-2685-fix-adot-dependency"
   version = "2.8.1"
 
   account_id                  = "565580475168"

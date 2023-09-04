@@ -9,10 +9,10 @@ module "this" {
   healthcheck_success_codes = "200-399"
   hostname                  = "test.dasmeta.com"
   name                      = "test"
-  namespace                 = "dev"
-  scheme                    = "internal"
-  tls_hosts                 = ["test.dasmeta.com"]
-  providers                 = { "aws" : "aws", "kubernetes" : "kubernetes" }
+  # namespace                 = "dev"
+  # scheme                    = "internal"
+  tls_hosts = ["test.dasmeta.com"]
+  providers = { "aws" : "aws", "kubernetes" : "kubernetes" }
 }
 
 

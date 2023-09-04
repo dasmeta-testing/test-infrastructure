@@ -16,7 +16,7 @@ provider "kubernetes" {
 
   cluster_ca_certificate = data.tfe_outputs.this["1-environments/dev-1/eks"].values.results.cluster_certificate
   host                   = data.tfe_outputs.this["1-environments/dev-1/eks"].values.results.cluster_host
-  token                  = data.tfe_outputs.this["1-environments/dev-1/eks"].values.results.cluster_token
+  # token                  = data.tfe_outputs.this["1-environments/dev-1/eks"].values.results.cluster_token
 
   exec {
 

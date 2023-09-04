@@ -8,20 +8,21 @@ terraform {
       name = "2-products_product-1_dev-1_ingress"
     }
   }
-
+  
   required_providers {
-
+  
     aws = {
-      source                = "hashicorp/aws"
-      version               = "~> 4.0"
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
       configuration_aliases = []
     }
-
+  
     kubernetes = {
-      source                = "hashicorp/kubernetes"
-      version               = "~> 2.23"
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.23"
       configuration_aliases = []
     }
+  
   }
 
   required_version = ">= 1.3.0"

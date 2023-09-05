@@ -10,7 +10,7 @@ variable "git_token" {}
 
 module "metacloud" {
   source  = "dasmeta/cloud/tfe"
-  version = "v2.0.1"
+  version = "v2.0.2"
 
   org   = "dasmeta-testing"
   token = var.tfc_token

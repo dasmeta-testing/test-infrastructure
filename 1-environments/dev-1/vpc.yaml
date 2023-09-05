@@ -20,7 +20,7 @@ variables:
     "kubernetes.io/role/elb": "1"
   private_subnet_tags:
     "kubernetes.io/cluster/eks-dev": "shared"
-    "kubernetes.io/role/internal-elb": "1"  
+    "kubernetes.io/role/internal-elb": "1"
 providers:
   - name: aws
     version: ~> 4.0

@@ -3,8 +3,8 @@ version: 1.1.4
 variables:
   name: "test"
   hostname: "test.dasmeta.com"
-  namespace: "dev"
-  scheme: "internal"
+  # namespace: "dev"
+  # scheme: "internal"
   certificate_arn : ${2-products/product-1/certificate.arn}
   healthcheck_path: "/health"
   healthcheck_success_codes: "200-399"
@@ -25,18 +25,22 @@ providers:
     module_nested_provider: true
     source: "hashicorp/kubernetes"
     variables:
-      cluster_ca_certificate: ${1-environments/dev-1/eks.ca_certificate}
-      host: ${1-environments/dev-1/eks.host}
-      token: ${1-environments/dev-1/eks.token}
+      cluster_ca_certificate: ${1-environments/dev-1/eks.cluster_certificate}
+      host: ${1-environments/dev-1/eks.cluster_host}
+      token: ${1-environments/dev-1/eks.cluster_token}
     blocks:
       exec:
         api_version: "client.authentication.k8s.io/v1beta1"
-        args: [
-          "eks",
-          "--region", "eu-central-1",
-          "get-token", "--cluster-name", local.cluster_name
-        ]
+        args:
+          - "eks"
+          - "--region"
+          - "eu-central-1"
+          - "get-token"
+          - "--cluster-name"
+          - ${1-environments/dev-1/eks.cluster_name}
         command: "aws"
+output:
+  sensitive: true
 linked_workspaces:
   - 1-environments/dev-1/eks
   - 2-products/product-1/certificate

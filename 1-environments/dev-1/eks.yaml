@@ -10,7 +10,7 @@ variables:
    - username: aram.karapetyan
    - username: julia.aghamyan
   # map_roles:
-  metrics_exporter: "none"
+  metrics_exporter: "adot"
   adot_config:
     accept_namespace_regex: "(default|kube-system)"
     additional_metrics: []

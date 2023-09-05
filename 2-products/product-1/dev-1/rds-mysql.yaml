@@ -12,7 +12,7 @@ variables:
   backup_retention_period: 30
   subnet_ids: ${1-environments/dev-1/vpc.private_subnets}
   apply_immediately: true
-  enabled_cloudwatch_logs_exports: ["mysql"]
+  enabled_cloudwatch_logs_exports: ["general"]
 providers:
   - name: aws
     version: ~> 4.0

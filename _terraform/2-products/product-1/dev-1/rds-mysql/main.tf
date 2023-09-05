@@ -9,7 +9,7 @@ module "this" {
   db_name = "dbdev"
   db_password = "passwordTerraform12!"
   db_username = "userTerraform"
-  enabled_cloudwatch_logs_exports = ["mysql"]
+  enabled_cloudwatch_logs_exports = ["general"]
   engine = "mysql"
   engine_version = "5.7"
   identifier = "dbdev"

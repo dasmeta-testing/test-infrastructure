@@ -1,0 +1,17 @@
+source: dasmeta/elasticache/aws
+version: 1.2.1
+variables:
+  name: "dev-1-redis"
+  vpc_id: ${1-environments/dev-1/vpc.id}
+  subnet_ids: ${1-environments/dev-1/vpc.private_subnets}
+  # allowed_security_group_ids: [sg-3456787654567] # this needs to be checked
+providers:
+  - name: aws
+    version: ~> 4.0
+    variables:
+      default_tags:
+        tags:
+          Account: boilerplate
+          ManageLevel: product
+linked_workspaces:
+  - 1-environments/dev-1/vpc

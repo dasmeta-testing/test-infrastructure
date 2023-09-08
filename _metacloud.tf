@@ -18,7 +18,7 @@ variable "secret_access_key" {}
 
 module "metacloud" {
   source  = "dasmeta/cloud/tfe"
-  version = "v2.0.2"
+  version = "v2.2.0"
 
   org   = var.tfc_org
   token = var.tfc_token
